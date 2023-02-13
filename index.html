@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
     <style>
       .jumbotron {
         background-image: url("./bg.jpg");
         background-size: cover;
         color: white;
-        height: 500px;
+        height: 400px;
       }
 
       .card {
@@ -22,8 +23,12 @@
         box-shadow: 0px 0px 10px #aaa;
       }
 
+      .card:hover{
+        background-color: #d1c9c9;
+      }
+
       .card-title {
-        color: #333;
+        color: #042b5e;
       }
 
       .card-text {
@@ -44,53 +49,78 @@
         box-shadow: 0px 0px 20px #aaa;
         transform: translateY(-5px);
       }
+      .display-3, .lead{
+        color: #042b5e;
+      }
     </style>
   </head>
   <body>
     <div class="jumbotron text-center">
-      <h1 class="display-3">Hello, I'm a Programmer!</h1>
-      <p class="lead">I love Python, currently learning Elixir, and have experience with Java, C and telecommunication networks.</p>
-      <a href="#skills" class="btn mt-3">See My Skills</a>
-    </div>
+      <h1 class="display-3" >Hello, I'm Jorge!</h1>
+      <p class="lead">Pythonista, currently learning Elixir, and some experience with Java, C and telecommunication networks.</p>
+      <p class="lead"><a href="https://github.com/Jorge-jr">Github</a></p>
 
     <div class="container mt-5" id="skills">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Python</h5>
-              <p class="card-text">I have a strong passion for Python and its vast ecosystem of libraries and tools for data science, web development, and more.</p>
+        <div class="card-pannel"> 
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title"><img height=30 src="kisspng-python-computer-icons-tutorial-computer-programmin-social-icons-5ad5ccbb30c4a8.2707803315239610191998.jpg"/> Python</h5>
+                        <p class="card-text">I have a strong passion for Python and its vast ecosystem of libraries and tools for data science, web development, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title"><img height=30 src="logo-elixir_rps0qd.png"/> Elixir</h5>
+                        <p class="card-text">I'm currently diving into
+                            Elixir the functional programming paradigm. I'm fascinated by its ability to handle high concurrency and scalability in web applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Others</h5>
+                        <p class="card-text">Begginer level experience with Java and C programming languages, which are both widely used in various industries and have their own strengths and weaknesses.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Elixir</h5>
-              <p class="card-text">I'm currently diving into
-                Elixir and its functional programming paradigms. I'm fascinated by its ability to handle high concurrency and scalability in web applications.</p>
+            <div class="row mt-3">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Telecommunication Networks</h5>
+                        <p class="card-text">I have a deep understanding of telecommunication networks and their protocols, which is a critical component of modern communication systems.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Java & C</h5>
-              <p class="card-text">I have some experience with Java and C programming languages, which are both widely used in various industries and have their own strengths and weaknesses.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Telecommunication Networks</h5>
-              <p class="card-text">I have a deep understanding of telecommunication networks and their protocols, which is a critical component of modern communication systems.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+        <div class="container mt-5">
+            <div id="github-stats"></div>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script>
+            $(document).ready(function() {
+                $.ajax({
+                url: "https://api.github.com/users/Jorge-jr",
+                success: function(data) {
+                    $("#github-stats").append("<p>Public Repositories: " + data.public_repos + "</p>");
+                    $("#github-stats").append("<p>GitHub URL: <a href='" + data.html_url + "'>" + data.html_url + "</a></p>");
+                }
+                });
+            });
+</script>
+
+            <h2>About Me</h2>
+            <p>I am an INTJ-A, which means I am introspective and analytical. I am always looking for ways to improve and optimize, and I have a natural talent for understanding 
+                complex systems and developing innovative solutions to problems. However, don't let my introspective nature fool you, I am not shy! I am confident in my abilities and 
+                I enjoy engaging with others and sharing my ideas.</p>
+          </div>
+    </div>>
   </body>
 </html>

@@ -1,0 +1,38 @@
+*{
+    color: #042b5e;
+}
+
+.hello{
+    padding: 100px;
+    background-color: rgb(227, 227, 238);
+    color: #042b5e;
+    margin: auto;
+    text-align: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    
+}
+
+.list{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+
+}
+
+.hello ul{
+    font-size: medium;
+    list-style-type: none;
+}
+
+.hello li{
+    padding: 10px;
+    font-size: 25px;
+}
